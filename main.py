@@ -10,7 +10,6 @@ df= []
 titles = ImdbRequest.get_titles(movie_title).json()
 for title in titles['results']:
     id = title['id']
-    breakpoint()
     rating = ImdbRequest.get_rating(id).json()
     user_rating = ImdbRequest.get_user_rating(id).json()
 
